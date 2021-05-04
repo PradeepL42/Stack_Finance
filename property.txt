@@ -1,0 +1,5 @@
+iosURL = "http://127.0.0.1 :4723/wd/hub"
+androidURL = "http://127.0.0.1 :4724/wd/hub"
+automationName = "XCUITest"
+iphone_platformName= "IOS"
+Android_platformName = "android"
