@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="/Users/pradeep/Kasier/testng">
        
         <classes>
-            <class name= "steps.Runner">
+            <class name= "step.Run">
                 
             </class>
         </classes>
