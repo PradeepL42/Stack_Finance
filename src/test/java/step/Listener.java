@@ -1,6 +1,6 @@
-package steps;
+package step;
 
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class Listener implements ITestListener
 {
-    AppiumDriver driver;
+    AndroidDriver driver;
 
     @AfterMethod
     public void tearDown(ITestResult result) {
@@ -29,9 +29,7 @@ public class Listener implements ITestListener
                 FileUtils.copyFile(screenshot, new File("/Users/pradeep/Kasier/target/screenshot.png"));
             } catch (IOException e) {
                 System.out.println(e.getMessage());
-            } catch (Exception e) {
-
-                System.out.println("Exception while taking screenshot " + e.getMessage());
+            }
             }
 
             if (ITestResult.SUCCESS == result.getStatus()) {
@@ -39,4 +37,4 @@ public class Listener implements ITestListener
             }
 
         }
-    }}
+    }
